@@ -10,6 +10,6 @@ export const ajaxPost = async ({
     // Continue handling 'responseData' ...
   },
 }) => {
-  const responseData = await fetch(url, data);
+  const responseData = await fetch(url, {method: "POST", body: JSON.stringify(data)});
   onSuccess(data);
 };
